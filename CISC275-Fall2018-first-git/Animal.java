@@ -1,5 +1,6 @@
+import java.util.Comparator;
 
-public class Animal {
+public abstract class Animal implements Comparable<Animal>{
 	String name;
 	int legs;
 
@@ -24,4 +25,16 @@ public class Animal {
 		this.legs = legs;
 	}
 	
+	public String toString() {
+		return this.name;
+	}
+	
+	@Override
+	public int compareTo(Animal a2) { 
+		if(this.getLegs() == a2.getLegs()) {
+			return this.getName().compareTo(a2.getName());
+		} else if(this.getLegs() > a2.getLegs()) {
+			return 1;
+		} else return -1;
+	}
 }
