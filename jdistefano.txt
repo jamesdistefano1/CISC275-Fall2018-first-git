@@ -1,3 +1,4 @@
 
+list of dogs, three individual dogs, the new comparator
 
-file to submit with lab
+the comparator class is passed in as the second parameter of collections.sort
